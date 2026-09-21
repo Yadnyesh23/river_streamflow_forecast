@@ -1,0 +1,27 @@
+#########################################
+# River Streamflow Forecasting Project
+# Phase 0 + Phase 1 Requirements
+#########################################
+
+# Data Processing
+pandas
+numpy
+
+# Visualization
+matplotlib
+
+# Machine Learning
+scikit-learn
+
+# Deep Learning
+torch
+
+# Notebook
+jupyter
+ipykernel
+
+# Progress Bars
+tqdm
+
+# Environment
+python-dotenv

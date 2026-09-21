@@ -1,0 +1,46 @@
+__pycache__/
+*.py[cod]
+*.so
+.Python
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment Variables
+.env
+
+# IDE Files
+.vscode/
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Python Cache
+.pytest_cache/
+.mypy_cache/
+
+# Model Checkpoints
+models/*.pt
+models/*.pth
+models/*.pkl
+models/*.joblib
+
+# Large datasets (keep folder structure only)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Output files
+outputs/*
+!outputs/.gitkeep
+
+# Logs
+*.log

@@ -1,303 +1,430 @@
 # River Streamflow Forecasting using TCN
+> Project Based Learning (Semester V) • KJ Somaiya Institute of Technology
 
-## Project Status
-
-- [ ] Project Started
-- [ ] Literature Review Completed
-- [ ] Final Report Submitted
-- [ ] Presentation Completed
+**Project:** Deep Learning Time-Series Forecasting of River Streamflow in Drought-Prone Basins (Krishna/Cauvery) under El Niño
 
 ---
 
-# Phase 0 - Project Planning
+## Project Progress
 
-## Research
-
-- [x] Understand River Streamflow
-- [x] Understand El Niño
-- [x] Understand Time Series
-- [ ] Understand LSTM
-- [ ] Understand TCN
-- [ ] Read 3–5 Research Papers
-- [ ] Finalize Dataset Source
-- [ ] Draw System Architecture
+- [ ] Phase 0 — Project Setup
+- [ ] Phase 1 — Dataset Collection & Understanding
+- [ ] Phase 2 — Exploratory Data Analysis (EDA)
+- [ ] Phase 3 — Data Preprocessing
+- [ ] Phase 4 — Feature Engineering
+- [ ] Phase 5 — Linear Regression (Baseline Model)
+- [ ] Phase 6 — Time-Series Sequence Generation
+- [ ] Phase 7 — LSTM Model
+- [ ] Phase 8 — Temporal Convolutional Network (TCN)
+- [ ] Phase 9 — Model Evaluation & Comparison
+- [ ] Phase 10 — FastAPI Backend
+- [ ] Phase 11 — PostgreSQL Integration
+- [ ] Phase 12 — React Frontend Dashboard
+- [ ] Phase 13 — Deployment & Final Documentation
 
 ---
 
-# Phase 1 - Data Collection
+# Phase 0 — Project Setup
+
+### Repository
+- [x] Create GitHub repository.
+- [x] Create project folder structure.
+- [x] Add `README.md`.
+- [x] Add `ROADMAP.md`.
+- [x] Add `TODO.md`.
+- [ ] Add `.gitignore`.
+- [ ] Add `requirements.txt`.
+
+### Environment
+- [ ] Create Python virtual environment.
+- [ ] Install required packages.
+- [ ] Verify project runs successfully.
+
+**Git Commit:** `phase-0-project-setup`
+
+---
+
+# 📊 Phase 1 — Dataset Collection & Understanding
 
 ## Learn
+- [ ] Understand river streamflow dataset.
+- [ ] Understand rainfall dataset.
+- [ ] Understand temperature dataset.
+- [ ] Understand Oceanic Niño Index (ONI).
+- [ ] Learn Pandas basics for data loading.
 
-- [ ] Time-series datasets
-- [ ] Data formats (CSV)
-- [ ] Dataset quality
+## Implementation
+- [ ] Download streamflow dataset (CWC / India-WRIS).
+- [ ] Download rainfall dataset (IMD).
+- [ ] Download temperature dataset (IMD).
+- [ ] Download ONI dataset (NOAA).
+- [ ] Create `01_dataset_understanding.ipynb`.
+- [ ] Load all CSV files.
+- [ ] Convert Date column to datetime.
+- [ ] Inspect data (`head`, `info`, `describe`).
+- [ ] Check missing values.
+- [ ] Document dataset observations.
 
-## Implement
+## Deliverables
+- [ ] `data/raw/streamflow.csv`
+- [ ] `data/raw/rainfall.csv`
+- [ ] `data/raw/temperature.csv`
+- [ ] `data/raw/oni.csv`
+- [ ] `docs/data_dictionary.md`
 
-- [ ] Download Streamflow dataset
-- [ ] Download Rainfall dataset
-- [ ] Download ONI dataset
-- [ ] Merge datasets
-- [ ] Create data dictionary
+**Git Commit:** `phase-1-dataset-understanding`
 
 ---
 
-# Phase 2 - Pandas & NumPy
+# 📈 Phase 2 — Exploratory Data Analysis (EDA)
 
 ## Learn
+- [ ] Line plots.
+- [ ] Histograms.
+- [ ] Box plots.
+- [ ] Correlation heatmaps.
+- [ ] Seasonal analysis.
 
-### Pandas
+## Implementation
+- [ ] Create `02_eda.ipynb`.
+- [ ] Plot streamflow trend.
+- [ ] Plot rainfall trend.
+- [ ] Plot temperature trend.
+- [ ] Plot ONI trend.
+- [ ] Plot monthly average streamflow.
+- [ ] Plot rainfall distribution.
+- [ ] Detect outliers using box plots.
+- [ ] Create correlation heatmap.
+- [ ] Analyze missing values visually.
+- [ ] Write EDA observations.
 
-- [ ] DataFrame
-- [ ] Series
-- [ ] Reading CSV
-- [ ] Filtering
-- [ ] Missing values
-- [ ] GroupBy
-- [ ] Merge
-- [ ] DateTime
+## Deliverables
+- [ ] Save all graphs inside `outputs/eda/`.
+- [ ] Complete EDA notebook.
 
-### NumPy
-
-- [ ] Arrays
-- [ ] Reshape
-- [ ] Vectorization
-
-## Implement
-
-- [ ] Load dataset
-- [ ] Explore dataset
-- [ ] Display statistics
+**Git Commit:** `phase-2-complete-eda`
 
 ---
 
-# Phase 3 - Exploratory Data Analysis
+# 🧹 Phase 3 — Data Preprocessing
 
 ## Learn
+- [ ] Missing value handling.
+- [ ] Interpolation for time-series.
+- [ ] Normalization.
+- [ ] Standardization.
+- [ ] Chronological train/test split.
 
-- [ ] Line Plot
-- [ ] Histogram
-- [ ] Box Plot
-- [ ] Heatmap
-- [ ] Correlation
+## Implementation
+- [ ] Create preprocessing notebook.
+- [ ] Remove duplicate records.
+- [ ] Handle missing values.
+- [ ] Scale numerical features.
+- [ ] Merge all datasets by Date.
+- [ ] Split train/validation/test chronologically.
+- [ ] Save processed dataset.
 
-## Implement
+## Deliverables
+- [ ] `data/processed/final_dataset.csv`
+- [ ] Preprocessing notebook.
 
-- [ ] Missing value analysis
-- [ ] Streamflow visualization
-- [ ] Rainfall visualization
-- [ ] Temperature visualization
-- [ ] Correlation heatmap
+**Git Commit:** `phase-3-preprocessing`
 
 ---
 
-# Phase 4 - Data Preprocessing
+# ⚙️ Phase 4 — Feature Engineering
 
 ## Learn
+- [ ] Lag features.
+- [ ] Rolling window features.
+- [ ] Moving averages.
+- [ ] Seasonality features.
+- [ ] ONI category feature.
 
-- [ ] Missing values
-- [ ] Outlier handling
-- [ ] Normalization
-- [ ] Standardization
+## Implementation
+- [ ] Create Lag-1 streamflow.
+- [ ] Create Lag-3 streamflow.
+- [ ] Create Lag-7 streamflow.
+- [ ] Create 7-day rolling rainfall average.
+- [ ] Create rolling temperature average.
+- [ ] Extract Month.
+- [ ] Extract Season.
+- [ ] Add El Niño category from ONI.
+- [ ] Save engineered dataset.
 
-## Implement
+## Deliverables
+- [ ] `data/processed/model_dataset.csv`
 
-- [ ] Clean dataset
-- [ ] Scale features
-- [ ] Save processed dataset
+**Git Commit:** `phase-4-feature-engineering`
 
 ---
 
-# Phase 5 - Feature Engineering
+# 📉 Phase 5 — Linear Regression Baseline
 
 ## Learn
+- [ ] Linear Regression.
+- [ ] Regression metrics.
+- [ ] Model training workflow.
 
-- [ ] Lag Features
-- [ ] Rolling Mean
-- [ ] Rolling Std
-- [ ] Sliding Window
+## Implementation
+- [ ] Create `05_linear_regression.ipynb`.
+- [ ] Train Linear Regression model.
+- [ ] Predict streamflow.
+- [ ] Calculate MAE.
+- [ ] Calculate RMSE.
+- [ ] Calculate R² Score.
+- [ ] Plot Actual vs Predicted graph.
+- [ ] Save trained model.
 
-## Implement
+## Deliverables
+- [ ] `models/linear_regression.pkl`
+- [ ] Baseline metrics report.
 
-- [ ] Create lag features
-- [ ] Create rolling features
-- [ ] Generate sequences
+**Git Commit:** `phase-5-linear-regression`
 
 ---
 
-# Phase 6 - Machine Learning
+# 🧠 Phase 6 — Time-Series Sequence Generation
 
 ## Learn
+- [ ] Sliding window.
+- [ ] Forecast horizon.
+- [ ] Sequence generation.
 
-- [ ] Linear Regression
-- [ ] Train/Test Split
-- [ ] MAE
-- [ ] RMSE
-- [ ] R² Score
+## Implementation
+- [ ] Create 30-day input sequences.
+- [ ] Create prediction labels.
+- [ ] Convert data into tensors.
+- [ ] Build PyTorch Dataset.
+- [ ] Build DataLoader.
 
-## Implement
+## Deliverables
+- [ ] Sequence generation notebook.
+- [ ] PyTorch Dataset module.
 
-- [ ] Train Linear Regression
-- [ ] Evaluate model
-- [ ] Save metrics
+**Git Commit:** `phase-6-sequence-generation`
 
 ---
 
-# Phase 7 - Deep Learning Fundamentals
+# 🔁 Phase 7 — LSTM Model
 
 ## Learn
+- [ ] PyTorch basics.
+- [ ] LSTM architecture.
+- [ ] Hidden state & Cell state.
+- [ ] Loss function.
+- [ ] Optimizer.
 
-- [ ] Neural Networks
-- [ ] Forward Pass
-- [ ] Backpropagation
-- [ ] Loss Functions
-- [ ] Optimizers
-- [ ] Epochs
-- [ ] Batch Size
+## Implementation
+- [ ] Build LSTM model.
+- [ ] Create training loop.
+- [ ] Train model.
+- [ ] Validate model.
+- [ ] Save trained model.
+- [ ] Plot training loss.
+- [ ] Plot validation loss.
+- [ ] Plot prediction graph.
+
+## Deliverables
+- [ ] `models/lstm.pt`
+- [ ] Loss graphs.
+- [ ] Prediction graphs.
+
+**Git Commit:** `phase-7-lstm-model`
 
 ---
 
-# Phase 8 - PyTorch
+# 🌊 Phase 8 — Temporal Convolutional Network (TCN)
 
 ## Learn
+- [ ] 1D Convolution.
+- [ ] Causal Convolution.
+- [ ] Dilated Convolution.
+- [ ] Residual Blocks.
+- [ ] Receptive Field.
 
-- [ ] Tensors
-- [ ] Dataset
-- [ ] DataLoader
-- [ ] nn.Module
-- [ ] Training Loop
-- [ ] Saving Models
+## Implementation
+- [ ] Build Residual Block.
+- [ ] Build TCN architecture.
+- [ ] Train TCN model.
+- [ ] Validate model.
+- [ ] Save trained model.
+- [ ] Plot loss curves.
+- [ ] Plot prediction graph.
 
-## Implement
+## Deliverables
+- [ ] `models/tcn.pt`
+- [ ] TCN prediction notebook.
 
-- [ ] Build first neural network
-- [ ] Train toy dataset
+**Git Commit:** `phase-8-tcn-model`
 
 ---
 
-# Phase 9 - LSTM
+# 📊 Phase 9 — Model Evaluation & Comparison
 
 ## Learn
+- [ ] RMSE.
+- [ ] MAE.
+- [ ] NSE.
+- [ ] R² Score.
+- [ ] Residual analysis.
 
-- [ ] Hidden State
-- [ ] Cell State
-- [ ] Sequence Learning
+## Implementation
+- [ ] Evaluate Linear Regression.
+- [ ] Evaluate LSTM.
+- [ ] Evaluate TCN.
+- [ ] Create comparison table.
+- [ ] Plot MAE comparison.
+- [ ] Plot RMSE comparison.
+- [ ] Plot R² comparison.
+- [ ] Select best-performing model.
 
-## Implement
+## Deliverables
+- [ ] `outputs/model_comparison.csv`
+- [ ] `outputs/model_comparison_graphs/`
 
-- [ ] Build LSTM
-- [ ] Train model
-- [ ] Evaluate
-- [ ] Save model
+**Git Commit:** `phase-9-model-comparison`
 
 ---
 
-# Phase 10 - Temporal Convolutional Network
+# ⚡ Phase 10 — FastAPI Backend
 
 ## Learn
+- [ ] FastAPI project structure.
+- [ ] Pydantic schemas.
+- [ ] Model inference.
+- [ ] API testing using Swagger / curl.
 
-- [ ] 1D Convolution
-- [ ] Causal Convolution
-- [ ] Dilated Convolution
-- [ ] Residual Blocks
-- [ ] Receptive Field
+## Implementation
+- [ ] Create FastAPI project.
+- [ ] Load trained model.
+- [ ] Create `/predict` endpoint.
+- [ ] Create `/health` endpoint.
+- [ ] Create `/models` endpoint.
+- [ ] Validate inputs.
+- [ ] Return prediction response.
 
-## Implement
+## Deliverables
+- [ ] Working FastAPI backend.
+- [ ] Swagger documentation.
 
-- [ ] Build TCN
-- [ ] Train model
-- [ ] Evaluate
-- [ ] Save model
-
----
-
-# Phase 11 - Model Comparison
-
-## Implement
-
-- [ ] Compare Linear Regression vs LSTM vs TCN
-- [ ] Generate comparison table
-- [ ] Generate graphs
-- [ ] Select best model
+**Git Commit:** `phase-10-fastapi-backend`
 
 ---
 
-# Phase 12 - Backend
+# 🗄️ Phase 11 — PostgreSQL Integration
 
 ## Learn
+- [ ] PostgreSQL.
+- [ ] SQLAlchemy ORM.
+- [ ] Alembic migrations.
 
-- [ ] FastAPI model serving
-- [ ] File Upload
-- [ ] API Design
+## Implementation
+- [ ] Create Prediction table.
+- [ ] Store prediction history.
+- [ ] Fetch prediction history.
+- [ ] Create CRUD operations.
+- [ ] Connect backend to database.
 
-## Implement
+## Deliverables
+- [ ] PostgreSQL database schema.
+- [ ] Prediction history API.
 
-- [ ] Prediction API
-- [ ] Upload endpoint
-- [ ] Model loading
+**Git Commit:** `phase-11-postgresql`
 
 ---
 
-# Phase 13 - Database
+# 💻 Phase 12 — React Frontend
 
 ## Learn
+- [ ] React components.
+- [ ] React hooks.
+- [ ] Axios.
+- [ ] Charts.
 
-- [ ] Database schema
+## Implementation
+- [ ] Home page.
+- [ ] Prediction page.
+- [ ] History page.
+- [ ] Model comparison page.
+- [ ] API integration.
+- [ ] Display prediction charts.
 
-## Implement
+## Deliverables
+- [ ] Complete React dashboard.
 
-- [ ] Prediction history
-- [ ] Store uploaded files
+**Git Commit:** `phase-12-react-dashboard`
 
 ---
 
-# Phase 14 - Frontend
+# 🚀 Phase 13 — Deployment & Documentation
 
 ## Learn
+- [ ] Docker.
+- [ ] Environment variables.
+- [ ] Deployment workflow.
 
-- [ ] React components
-- [ ] API integration
-- [ ] Charts
+## Implementation
+- [ ] Dockerize backend.
+- [ ] Deploy FastAPI.
+- [ ] Deploy React.
+- [ ] Connect PostgreSQL.
+- [ ] Update README with setup instructions.
+- [ ] Record demo video.
+- [ ] Final testing.
 
-## Implement
+## Deliverables
+- [ ] Live website.
+- [ ] Final documentation.
+- [ ] Final report.
 
-- [ ] Home page
-- [ ] Upload page
-- [ ] Prediction page
-- [ ] History page
-
----
-
-# Phase 15 - Deployment
-
-## Learn
-
-- [ ] Docker
-- [ ] Deployment basics
-
-## Implement
-
-- [ ] Deploy backend
-- [ ] Deploy frontend
-- [ ] Connect database
-- [ ] Final testing
+**Git Commit:** `phase-13-deployment`
 
 ---
 
-# Documentation
+# 🎓 Viva Preparation Checklist
 
-- [ ] README
-- [ ] PPT
-- [ ] Report
-- [ ] Architecture Diagram
-- [ ] Viva Preparation
+## Machine Learning
+- [ ] Supervised Learning.
+- [ ] Regression.
+- [ ] Feature Engineering.
+- [ ] Evaluation Metrics.
+
+## Deep Learning
+- [ ] Neural Networks.
+- [ ] LSTM.
+- [ ] TCN.
+- [ ] 1D Convolution.
+- [ ] Dilated Convolution.
+- [ ] Causal Convolution.
+
+## Project
+- [ ] Explain complete architecture.
+- [ ] Explain dataset pipeline.
+- [ ] Explain model comparison.
+- [ ] Explain backend flow.
+- [ ] Explain frontend flow.
 
 ---
 
-# Stretch Goals
+# 📅 Weekly Progress Tracker
 
-- [ ] Real-time prediction
-- [ ] Interactive dashboard
-- [ ] Multiple river support
-- [ ] Weather API integration
-- [ ] Docker Compose
+| Week | Status |
+|-------|--------|
+| Week 1 | ⬜ Dataset + EDA |
+| Week 2 | ⬜ Preprocessing + Feature Engineering |
+| Week 3 | ⬜ Linear Regression |
+| Week 4 | ⬜ LSTM |
+| Week 5 | ⬜ TCN |
+| Week 6 | ⬜ Model Comparison |
+| Week 7 | ⬜ Backend + Database |
+| Week 8 | ⬜ Frontend + Deployment |
+
+---
+
+## 🏁 Final Goal
+
+- [ ] End-to-End AI Streamflow Forecasting System.
+- [ ] Compare Linear Regression, LSTM, and TCN.
+- [ ] Deploy FastAPI + React application.
+- [ ] Complete PBL report, PPT, and viva preparation.# 🌊 River Streamflow Forecasting using TCN
