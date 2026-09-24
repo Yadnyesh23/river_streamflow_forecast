@@ -7,7 +7,7 @@
 
 ## Project Progress
 
-- [ ] Phase 0 — Project Setup
+- [x] Phase 0 — Project Setup
 - [ ] Phase 1 — Dataset Collection & Understanding
 - [ ] Phase 2 — Exploratory Data Analysis (EDA)
 - [ ] Phase 3 — Data Preprocessing
@@ -32,13 +32,13 @@
 - [x] Add `README.md`.
 - [x] Add `ROADMAP.md`.
 - [x] Add `TODO.md`.
-- [ ] Add `.gitignore`.
-- [ ] Add `requirements.txt`.
+- [x] Add `.gitignore`.
+- [x] Add `requirements.txt`.
 
 ### Environment
-- [ ] Create Python virtual environment.
-- [ ] Install required packages.
-- [ ] Verify project runs successfully.
+- [x] Create Python virtual environment.
+- [x] Install required packages.
+- [x] Verify project runs successfully.
 
 **Git Commit:** `phase-0-project-setup`
 
@@ -47,30 +47,31 @@
 # 📊 Phase 1 — Dataset Collection & Understanding
 
 ## Learn
-- [ ] Understand river streamflow dataset.
-- [ ] Understand rainfall dataset.
-- [ ] Understand temperature dataset.
-- [ ] Understand Oceanic Niño Index (ONI).
-- [ ] Learn Pandas basics for data loading.
+- [x] Understand river streamflow dataset.
+- [x] Understand rainfall dataset.
+- [x] Understand temperature dataset.
+- [x] Understand Oceanic Niño Index (ONI).
+- [x] Learn Pandas basics for data loading.
 
 ## Implementation
-- [ ] Download streamflow dataset (CWC / India-WRIS).
-- [ ] Download rainfall dataset (IMD).
-- [ ] Download temperature dataset (IMD).
-- [ ] Download ONI dataset (NOAA).
-- [ ] Create `01_dataset_understanding.ipynb`.
-- [ ] Load all CSV files.
-- [ ] Convert Date column to datetime.
-- [ ] Inspect data (`head`, `info`, `describe`).
-- [ ] Check missing values.
-- [ ] Document dataset observations.
+- [x] Create `docs/data_dictionary.md`.
+- [x] Download streamflow dataset (CWC / India-WRIS).
+- [x] Download rainfall dataset (IMD).
+- [x] Download temperature dataset (IMD).
+- [x] Download ONI dataset (NOAA).
+- [x] Create `01_dataset_understanding.ipynb`.
+- [x] Load all CSV files.
+- [x] Convert Date column to datetime.
+- [x] Inspect data (`head`, `info`, `describe`).
+- [x] Check missing values.
+- [x] Document dataset observations.
 
 ## Deliverables
-- [ ] `data/raw/streamflow.csv`
-- [ ] `data/raw/rainfall.csv`
-- [ ] `data/raw/temperature.csv`
-- [ ] `data/raw/oni.csv`
-- [ ] `docs/data_dictionary.md`
+- [x] `data/raw/streamflow.csv`
+- [x] `data/raw/rainfall.csv`
+- [x] `data/raw/temperature.csv`
+- [x] `data/raw/oni.csv`
+- [x] `docs/data_dictionary.md`
 
 **Git Commit:** `phase-1-dataset-understanding`
 

@@ -238,3 +238,13 @@ K. J. Somaiya Institute of Technology
 - Interactive dashboard
 - Cloud deployment
 - Model optimization
+
+
+## Data Source 
+- ONI 
+- Temperature 
+  tmax - https://www.imdpune.gov.in/cmpg/Griddata/Max_1_Bin.html
+  tmin - https://www.imdpune.gov.in/cmpg/Griddata/Min_1_Bin.html
+- Rainfall
+- Streamflow
+- Boundaries 
