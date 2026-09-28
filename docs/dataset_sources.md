@@ -20,7 +20,7 @@ This document describes the source, format, preprocessing pipeline, and usage of
 
 # 1. River Streamflow Dataset
 
-**Source:** India-WRIS (Water Resources Information System) / Central Water Commission (CWC). <Cite refs={["turn525328search6","turn525328search5"]}/>
+**Source:** India-WRIS (Water Resources Information System) / Central Water Commission (CWC). https://www.nwdp.nwic.gov.in/dataset/river-discharge-manual-dailly-central-water-commission-cw
 
 ### Description
 
@@ -64,8 +64,7 @@ data/interim/
 
 # 2. Rainfall Dataset
 
-**Source:** India Meteorological Department (IMD) Gridded Daily Rainfall Dataset (0.25° × 0.25° resolution). <Cite refs={["turn525328search2","turn525328search11"]}/>
-
+**Source:** India Meteorological Department (IMD) Gridded Daily Rainfall Dataset (0.25° × 0.25° resolution). https://www.imdpune.gov.in/cmpg/Griddata/Rainfall_25_NetCDF.html
 ### Description
 
 Observed daily rainfall values over India stored as yearly NetCDF files.
@@ -115,8 +114,9 @@ Each CSV contains:
 
 # 3. Temperature Dataset
 
-**Source:** India Meteorological Department (IMD) Daily Gridded Temperature Dataset. <Cite ref="turn525328search1"/>
-
+**Source:** India Meteorological Department (IMD) Daily Gridded Temperature Dataset.
+Tmax : https://www.imdpune.gov.in/cmpg/Griddata/Max_1_Bin.html
+Tmin : https://www.imdpune.gov.in/cmpg/Griddata/Min_1_Bin.html
 ### Description
 
 Daily gridded maximum and minimum temperature observations over India.
@@ -177,8 +177,7 @@ Each CSV contains:
 
 # 4. Oceanic Niño Index (ONI)
 
-**Source:** NOAA Climate Prediction Center (CPC). <Cite ref="turn525328search1"/>
-
+**Source:** NOAA Climate Prediction Center (CPC). https://cpc.ncep.noaa.gov/products/analysis_monitoring/enso/oni/v6/
 ### Description
 
 Monthly Oceanic Niño Index representing sea surface temperature anomalies in the Niño 3.4 region of the Pacific Ocean.
